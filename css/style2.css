@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    font-family: "標楷體";
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    width: 1024px;
+    padding: 0 12px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: green;
+}
+.main > * :not(aside,section) , aside > * , section > * {
+    border: 1px solid lightgray;
+}
+/* top */
+.top {
+    flex-basis: 1000px;
+    /* width: 1000px; */
+    height: 65px;
+}
+.aside {
+    flex-basis: 215px;
+    /* width: 215px; */
+    height: calc(768px - 65px - 20px);
+    display: flex;
+    flex-direction: column;
+}
+.menu {
+    flex-basis: calc(100% - 25px);
+    color: green;
+} 
+.update {
+    flex-basis: 25px;
+    color: green;
+}
+.section {
+    flex-basis: calc(100% - 215px);
+    display: flex;
+    flex-direction: column;
+    
+}
+.marquee {
+    flex-basis: 29px;
+} 
+.content {
+    flex-basis: calc(100% - 29px);
+
+} 
+.footer {
+    color: green;
+    flex-basis: 1000px;
+}

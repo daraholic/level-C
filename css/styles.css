@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    /* 直接訂出外框大小 */
+    font-family: '標楷體';
+    /* 整頁的字型都是統一的 */
+    overflow: hidden;
+    /* 超出範圍就隱藏 */
+}
+
+/* bosy main */
+.main {
+    background-color: cornsilk;
+    display: flex;
+    width: 1024px;
+    padding: 0 12px;
+    margin: 10px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* body內除了aside,section都要套用{}裝飾 */
+/* 以下的語法千萬不能有空白 會壞掉!! */
+.main>*:not(aside,section) , aside > * , section > * {
+    border: 1px solid lightgray;
+}
+/* body>* {
+    border: 1px solid lightgray;
+}
+
+aside>* {
+    border: 1px solid lightgray;
+}
+
+section>* {
+    border: 1px solid lightgray;
+} */
+
+
+/* top */
+.top {
+    flex-basis: 1000px;
+    height: 65px;
+}
+
+/* aside */
+.aside {
+    flex-basis: 215px;
+    /* 這邊的flex = 寬度 */
+    /* flex-basis: 215px; 等於 width: 215px; */
+    /* flex box 優先度高 */
+    height: calc(768px - 65px - 20px);
+    display: flex;
+    flex-direction: column;
+    /* border: 5px solid green; */
+}
+
+/* aside .menu */
+.menu {
+    flex-basis: calc(100% - 25px);
+    /* 這邊的flex = 高度 */
+    text-align: center;
+}
+
+/* aside .menu header*/
+.aside-menu-header {
+    color:#FF00FF;
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* aside .menu nav a*/
+.aside>nav>a {
+    color: #000000;
+    background: url('../images/menu1.png');
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#myLinlk {
+    text-decoration: underline;
+}
+
+.aside>nav>a:hover {
+    background: url('../images/menu2.png');
+
+}
+
+/* aside .menu */
+.update {
+    flex-basis: 25px;
+}
+
+/* section */
+.section {
+    flex-basis:calc(1000px - 215px);
+    /* width:calc(1000px - 215px); */
+    display:flex;
+    flex-flow: column nowrap;
+}
+
+.marquee {
+    flex-basis: 29px;
+    padding: 0 calc((100% - 770px - 2px) /2);
+    font-family: "標楷體";
+    font-size: 24px;
+    color: #0000FF;
+    /* padding 上下 + 左右(calc算出來的數字要除以二才會是左右平均的數字) */
+}   
+
+
+.content {
+    flex-basis: calc(100% - 29px);
+    padding: 0 calc((100% - 770px - 2px) /2);
+}
+  
+.footer {
+        flex-basis: 1000px;
+        height: 20px;
+        color: black;
+    }
