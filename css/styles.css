@@ -9,7 +9,7 @@
 
 /* bosy main */
 .main {
-    background-color: cornsilk;
+    background-color: white;
     display: flex;
     width: 1024px;
     padding: 0 12px;
@@ -20,7 +20,7 @@
 
 /* body內除了aside,section都要套用{}裝飾 */
 /* 以下的語法千萬不能有空白 會壞掉!! */
-.main>*:not(aside,section) , aside > * , section > * {
+body>*:not(aside,section) , aside > * , section > * {
     border: 1px solid lightgray;
 }
 /* body>* {
@@ -67,7 +67,7 @@ section>* {
     font-size: 24px;
     text-decoration: underline;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 /* aside .menu nav a*/
@@ -82,7 +82,7 @@ section>* {
     text-decoration: none;
 }
 
-#myLinlk {
+#myLink {
     text-decoration: underline;
 }
 
@@ -94,6 +94,7 @@ section>* {
 /* aside .menu */
 .update {
     flex-basis: 25px;
+    text-align: center;
 }
 
 /* section */
@@ -122,5 +123,7 @@ section>* {
 .footer {
         flex-basis: 1000px;
         height: 20px;
-        color: black;
+        color: #000000;
+        text-align: center;
+        font-size: 16px;
     }
